@@ -1,20 +1,20 @@
-var React = require('react')
-var render = require('react-dom').render
-var MyTitle = require('./MyTitle')
+import React from 'react'
+import { render } from 'react-dom'
+import '../public/normalize.css'
+import '../public/style.css'
 
-var MyTitleFact = React.createFactory(MyTitle)
-
-// replace render method
-var MyFirstComponent = React.createClass({
+const App = React.createClass({
   render () {
     return (
-      div(null,
-        MyTitleFact({title: 'Props are great!'}),
-        MyTitleFact({title: 'Use props everywhere!'}),
-        MyTitleFact({title: 'Props are the best!'})
-      )
+      <div className='app'>
+        <div className='landing'>
+          <h1>svideo</h1>
+          <input type='text' placeholder='Search' />
+          <a>or Browse All</a>
+        </div>
+      </div>
     )
   }
 })
 
-render(React.createElement(MyFirstComponent), document.getElementById('app'))
+render(<App />, document.getElementById('app'))
