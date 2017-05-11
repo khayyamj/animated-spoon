@@ -9,9 +9,9 @@ class Header extends React.Component {
 
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this)
   }
-handleSearchTermChange (event) {
-  this.props.dispatch(setSearchTerm(event.target.value))
-}
+  handleSearchTermChange (event) {
+    this.props.dispatch(setSearchTerm(event.target.value))
+  }
   render () {
     let utilSpace
     if (this.props.showSearch) {
